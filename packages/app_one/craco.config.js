@@ -7,7 +7,7 @@ module.exports = {
       add: [
         new ModuleFederationPlugin({
           name: "remoteAppOne",
-          filename: "remoteAppOneEntry.js",
+          filename: "remoteEntry.js",
           exposes: {
             "./UserList": "./src/components/User/UserList",
           },

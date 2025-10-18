@@ -1,0 +1,29 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100vh;
+}
+
+.gallery-list li {
+  width: 100px;
+}
+
+.gallery-list li span,
+.gallery-list li strong {
+  display: block;
+  padding: 0.4rem 1rem;
+}
+
+.gallery-list .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100vh - 200px);
+}
