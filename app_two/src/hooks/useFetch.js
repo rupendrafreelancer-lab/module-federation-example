@@ -12,7 +12,6 @@ export function useFetch(url) {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log("data", data);
         setData(data);
         setIsLoading(false);
         setError("");

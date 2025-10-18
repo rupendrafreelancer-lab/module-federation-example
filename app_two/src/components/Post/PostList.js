@@ -1,5 +1,6 @@
 import { useFetch } from "../../hooks/useFetch";
 import { PostDetail } from "./PostDetail";
+import "./PostList.css";
 
 function PostList({ id, userId, title, body }) {
   const { data, isLoading, error } = useFetch("https://jsonplaceholder.typicode.com/posts");
@@ -23,7 +24,7 @@ function PostList({ id, userId, title, body }) {
         <strong>Body</strong>
       </li>
       {data.map((post) => (
-        <PostDetail {...post} />
+        <PostDetail key={post.id} {...post} />
       ))}
     </ul>
   );

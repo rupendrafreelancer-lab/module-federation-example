@@ -23,5 +23,12 @@ module.exports = {
         }),
       ],
     },
+    configure: (webpackConfig) => ({
+      ...webpackConfig,
+      output: {
+        ...webpackConfig.output,
+        publicPath: "auto",
+      },
+    }),
   },
 };

@@ -1,5 +1,6 @@
 import { useFetch } from "../../hooks/useFetch";
 import { UserInfo } from "./UserInfo";
+import "./UserList.css";
 
 function UserList() {
   const { data, isLoading, error } = useFetch("https://jsonplaceholder.typicode.com/users");

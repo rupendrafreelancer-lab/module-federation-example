@@ -1,5 +1,4 @@
 import UserList from "../User/UserList";
-import "./App.css";
 
 function App() {
   return (

@@ -1,5 +1,4 @@
 import PostList from "../Post/PostList";
-import "./App.css";
 
 export function App() {
   return (
