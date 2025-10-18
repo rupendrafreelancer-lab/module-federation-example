@@ -1,0 +1,32 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.post-list li {
+  width: 100px;
+  padding: 0.4rem 1rem;
+}
+
+.post-list li span {
+  display: block;
+  white-space: nowrap; /* Prevents the text from wrapping to the next line */
+  overflow: hidden; /* Hides any content that overflows the element's box */
+  text-overflow: ellipsis; /* Displays an ellipsis (...) to represent clipped text */
+}
+
+.post-list li.title {
+  width: 300px;
+}
+
+.post-list li.body {
+  width: calc(100vh - 500px);
+}

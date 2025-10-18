@@ -1,0 +1,22 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.user-list li {
+  padding: 0.4rem 1rem;
+}
+
+.user-list li span {
+  white-space: nowrap; /* Prevents the text from wrapping to the next line */
+  overflow: hidden; /* Hides any content that overflows the element's box */
+  text-overflow: ellipsis; /* Displays an ellipsis (...) to represent clipped text */
+  /* width: 200px; */
+}

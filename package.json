@@ -1,0 +1,20 @@
+{
+  "name": "module_federation",
+  "private": true,
+  "workspaces": [
+    "host",
+    "app_one",
+    "app_two"
+  ],
+  "scripts": {
+    "start": "lerna run start --parallel"
+  },
+  "dependencies": {
+    "app_one": "*",
+    "app_two": "*",
+    "host": "*"
+  },
+  "devDependencies": {
+    "lerna": "^9.0.0"
+  }
+}
