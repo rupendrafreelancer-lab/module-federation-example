@@ -6,12 +6,10 @@ module.exports = {
     plugins: {
       add: [
         new ModuleFederationPlugin({
-          name: "root",
-          remotes: {
-            remoteAppOne: "remoteAppOne@http://localhost:3001/remoteEntry.js",
-            remoteAppTwo: "remoteAppTwo@http://localhost:3002/remoteEntry.js",
-            remoteAppThree: "remoteAppThree@http://localhost:3003/remoteEntry.js",
-            remoteAppFour: "remoteAppFour@http://localhost:3004/remoteEntry.js",
+          name: "remoteAppFour",
+          filename: "remoteEntry.js",
+          exposes: {
+            "./PhotoList": "./src/components/Photo/PhotoList",
           },
           shared: {
             ...deps,
@@ -25,5 +23,12 @@ module.exports = {
         }),
       ],
     },
+    configure: (webpackConfig) => ({
+      ...webpackConfig,
+      output: {
+        ...webpackConfig.output,
+        publicPath: "auto",
+      },
+    }),
   },
 };

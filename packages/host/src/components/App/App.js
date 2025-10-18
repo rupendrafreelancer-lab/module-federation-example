@@ -5,6 +5,7 @@ import "./App.css";
 const UserList = React.lazy(() => import("remoteAppOne/UserList"));
 const PostList = React.lazy(() => import("remoteAppTwo/PostList"));
 const GalleryList = React.lazy(() => import("remoteAppThree/GalleryList"));
+const PhotoList = React.lazy(() => import("remoteAppFour/PhotoList"));
 
 export function App() {
   return (
@@ -23,6 +24,9 @@ export function App() {
           </li>
           <li>
             <Link to="/galleries">Galleries</Link>
+          </li>
+          <li>
+            <Link to="/photos">Photos</Link>
           </li>
         </ul>
       </nav>
@@ -50,6 +54,14 @@ export function App() {
             element={
               <Suspense fallback={<div>Loading...</div>}>
                 <GalleryList />
+              </Suspense>
+            }
+          ></Route>
+          <Route
+            path="/photos"
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <PhotoList />
               </Suspense>
             }
           ></Route>

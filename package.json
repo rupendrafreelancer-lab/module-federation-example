@@ -5,7 +5,8 @@
     "packages/host",
     "packages/app_one",
     "packages/app_two",
-    "packages/app_three"
+    "packages/app_three",
+    "packages/app_four"
   ],
   "scripts": {
     "start": "lerna run start --parallel"
